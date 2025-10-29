@@ -30,23 +30,26 @@
 
 
 
-const btn = document.querySelector("button")
-const body = document.querySelector("body")
+// const btn = document.querySelector("button")
+// const body = document.querySelector("body")
 
-let imgSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIonIMvIShPTxQdYUxA-QF8wl825JWYaiTQ&s"
+// let imgSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIonIMvIShPTxQdYUxA-QF8wl825JWYaiTQ&s"
 
 
-btn.addEventListener("click", ()=>{
-   let img = document.createElement("img")
-   img.setAttribute("src",imgSrc) 
+// btn.addEventListener("click", ()=>{
+//    let img = document.createElement("img")
+//    img.setAttribute("src",imgSrc) 
 
-   img.style.position = "absolute"
-   let top = Math.floor(Math.random()*90)
-   let left = Math.floor(Math.random()*90)
+//    img.style.position = "absolute"
+//    let top = Math.floor(Math.random()*90)
+//    let left = Math.floor(Math.random()*90)
 
-   img.style.top = top+"%"
-   img.style.left = left+"%"
+//    img.style.top = top+"%"
+//    img.style.left = left+"%"
 
-   body.appendChild(img)
+//    body.appendChild(img)
 
-})
+// })
+
+
+console.log("hello from node");
