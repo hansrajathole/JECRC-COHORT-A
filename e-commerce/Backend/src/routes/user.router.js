@@ -8,7 +8,7 @@ const router = express.Router()
 //     next()
 // })
 
-
+router.get("/register",userController.getRegisterController)
 router.post("/register",userController.registerController)
 router.post("/login", userController.loginController)
 router.get("/me/:userId" ,userController.meController)

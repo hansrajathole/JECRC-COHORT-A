@@ -47,7 +47,14 @@ const registerController = async (req, res)=>{
     }
 }
 
-
+const getRegisterController = (req, res)=>{
+   try {
+      
+      res.render("register.ejs")
+   } catch (error) {
+      
+   }
+}
 
 
 
@@ -108,5 +115,6 @@ const meController = async (req, res)=>{
 export {
     registerController,
     loginController,
-    meController
+    meController,
+    getRegisterController
 }
