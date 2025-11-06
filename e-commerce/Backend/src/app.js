@@ -4,10 +4,12 @@ import productRouter from "./routes/product.router.js"
 import morgan from 'morgan'
 import path from "path"
 import { fileURLToPath } from 'url'
+import { configDotenv } from 'dotenv'
 
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+configDotenv()
 
 
 const app = express()

@@ -1,6 +1,7 @@
 import userModel from "../models/user.model.js"
 import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken"
+import config from "../config/config.js"
 
 const registerController = async (req, res)=>{
     try {
@@ -87,7 +88,7 @@ const loginController = async (req, res)=>{
       id : user._id,
       username : user.username,
       email : user.email
-   },"secret-key")
+   },config.JWT_SECRET_KEY)
 
    res.status(200).json({message : "login successfully", token , user})
 

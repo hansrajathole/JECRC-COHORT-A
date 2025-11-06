@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
+import config from "../config/config.js";
 
 const connect = ()=>{
-    mongoose.connect("mongodb://localhost:27017/jecrc-cohort-a")
+    mongoose.connect(config.MONGODB_URI)
     .then(()=>{
         console.log("database connected");
         
