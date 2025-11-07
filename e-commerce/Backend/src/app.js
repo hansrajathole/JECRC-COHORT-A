@@ -5,6 +5,7 @@ import morgan from 'morgan'
 import path from "path"
 import { fileURLToPath } from 'url'
 import { configDotenv } from 'dotenv'
+import cors from 'cors'
 
 
 const __filename = fileURLToPath(import.meta.url)
@@ -19,6 +20,8 @@ app.use((req, res, next)=>{
     next()
 })
 
+
+app.use(cors("*"))
 app.use(morgan("dev"))
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))

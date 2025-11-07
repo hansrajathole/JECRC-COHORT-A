@@ -37,8 +37,16 @@ const registerController = async (req, res)=>{
         password : hashedPass
       })
 
+
+      delete user._doc.password
+
+       const token = jwt.sign({
+      id : user._id,
+      username : user.username,
+      email : user.email
+   },config.JWT_SECRET_KEY)
     
-      res.status(201).json({message : "register successfully", user})
+      res.status(201).json({message : "register successfully",token , user})
     
     
     } catch (error) {

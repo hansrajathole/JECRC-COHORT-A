@@ -2,6 +2,7 @@ import React from 'react'
 import Navber from './components/Navber'
 import {Routes , Route} from 'react-router-dom'
 import Login from './pages/Login'
+import Register from './pages/Register'
 
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
      
       <Routes>
         <Route path='/login' element={ <Login/>}/>
-        <Route path='/register' element={ <h1>Register page</h1>}/>
+        <Route path='/register' element={ <Register/>}/>
       </Routes>
     </div>
 
