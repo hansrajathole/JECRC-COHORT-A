@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken"
 import userModel from "../models/user.model.js"
+import config from '../config/config.js'
+
 
 const protectedRoute = async (req, res, next) => {
     try {
@@ -10,7 +12,7 @@ const protectedRoute = async (req, res, next) => {
         return res.status(401).json({message : "unauthorized user"})
        }
 
-       const decode = jwt.verify(token, "secret-key" )
+       const decode = jwt.verify(token, config.JWT_SECRET_KEY )
 
 
     //   const decode =  {
